@@ -2,7 +2,7 @@ import ImageOne from '../images/mika.jpg'
 import ImageTwo from '../images/mika2.jpg'
 
 export const InfoData = {
-    heading: 'Explore our beautiful homes',
+    heading: 'Actress, Model and Entertainer',
     paragraphOne: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     paragraphTwo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam velit ipsa enim quaerat quidem perferendis atque fugit, quae repudiandae reiciendis cum officiis aspernatur beatae illo eius molestias culpa doloremque.',
     buttonLabel: 'View Homes',

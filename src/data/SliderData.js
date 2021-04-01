@@ -2,6 +2,10 @@ import ImageOne from '../images/nedgång.jpg';
 import ImageTwo from '../images/uddav.jpg';
 import ImageThree from '../images/charlene.jpg';
 import ImageFour from '../images/vhs.jpg';
+import ImageFive from '../images/circlek.jpg';
+import ImageSix from '../images/skandia.jpg';
+import ImageSeven from '../images/cdon.jpg';
+import ImageEight from '../images/raddabarnen.jpg';
 
 export const SliderData = [
   {
@@ -30,10 +34,45 @@ export const SliderData = [
   },
   {
     title: "Världens Hemskaste Sjukdomar",
-    price: "Regi, ",
+    price: "Regi, Kristian ",
     path: "/homes",
     label: "IMDB",
     image: ImageFour,
+    alt: "VHS",
+  },
+];
+
+  export const SliderDataTwo = [
+  {
+    title: "CirckleK",
+    price: "Regi, Sofia Priftis",
+    path: "/homes",
+    label: "IMDB",
+    image: ImageFive,
+    alt: "Nedgång",
+  },
+  {
+    title: "Skandia",
+    price: "Regi, Emma Bucht, Christopher Panov & Christian Eklöw",
+    path: "/homes",
+    label: "IMDB",
+    image: ImageSix,
+    alt: "Udda Veckor",
+  },
+  {
+    title: "CDON",
+    price: "Regi, Navneet Singh",
+    path: "/homes",
+    label: "IMDB",
+    image: ImageSeven,
+    alt: "Charléne",
+  },
+  {
+    title: "Rädda Barnen",
+    price: "Regi, Kristian ",
+    path: "/homes",
+    label: "IMDB",
+    image: ImageEight,
     alt: "VHS",
   },
 ];

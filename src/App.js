@@ -1,11 +1,15 @@
 import React, {useState} from "react";
 import Navbar from "./components/navbar";
 import Dropdown from "./components/Dropdown";
-import InfoSection from "./components/InfoSection";
 import GlobalStyle from './globalStyles';
-import Hero from './components/Hero';
-import { SliderData } from "./data/SliderData";
-import { InfoData, InfoDataTwo } from "./data/InfoData";
+import Footer from './components/Footer';
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Pictures from "./pages/Pictures";
+import Video from "./pages/Video";
+
 
 function App() {
 const [isOpen, setIsOpen] = useState(false)
@@ -18,9 +22,14 @@ const toggle = () => {
       <GlobalStyle />
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Hero slides={SliderData} />
-      <InfoSection {...InfoData} />
-      <InfoSection {...InfoDataTwo} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/pictures" component={Pictures} />
+        <Route path="/video" component={Video} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
     </>
   );
   }

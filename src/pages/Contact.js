@@ -1,7 +1,7 @@
 
 import emailjs from "emailjs-com";
 
-export default function ContactUs() {
+export default function Contact() {
   function sendEmail(e) {
     e.preventDefault();
 
