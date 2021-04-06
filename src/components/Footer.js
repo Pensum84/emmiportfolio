@@ -2,15 +2,15 @@ import React from 'react';
 import { IoMdArrowRoundForward } from "react-icons/io";
 import styled, { css } from "styled-components/macro";
 import { Button } from "./Button";
-import { Link } from "react-router-dom";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaImdb } from "react-icons/fa";
+import { BiFilm } from "react-icons/bi";
 
 const Section = styled.section`
-background: #000d1a;
-color: #fff;
-width: 100%;
-min-height: 600px;
-padding: 3rem calc((100vw - 1300px) / 2);
+  background: #212120;
+  color: #fff;
+  width: 100%;
+  min-height: 500px;
+  padding: 3rem calc((100vw - 1300px) / 2);
 `;
 const Container = styled.div`
 height: 100%;
@@ -31,7 +31,7 @@ flex: 1;
 padding: 2rem 0rem;
 
 h3{
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(2rem, 8vw, 4rem);
 }
 `;
 const FooterInfo = styled.div`
@@ -74,6 +74,13 @@ color: #cd853f;
 const Instagram = styled(FaInstagram)`
 ${Icons}
 `;
+const IMDB = styled(FaImdb)`
+  ${Icons}
+`;
+const Film = styled(BiFilm)`
+  ${Icons}
+`;
+
 const Contact = styled.div`
   width: 50%;
   display: flex;
@@ -93,39 +100,51 @@ const Footer = () => {
           <FooterTop>
             <Quote>
               <h3>
-                Let´s find <br /> your Dream Home
+                Let´s Work <br /> Together!
               </h3>
             </Quote>
             <FooterInfo>
-              <h4>Contact Us</h4>
-              <Link to="/homes">FAQ</Link>
-              <Link to="/homes">Support</Link>
-              <Link to="/homes">Questions</Link>
-            </FooterInfo>
-            <FooterInfo>
-              <h4>Offices</h4>
-              <Link to="/homes">US</Link>
-              <Link to="/homes">Europe</Link>
-              <Link to="/homes">UK</Link>
+              <h3>Agent</h3>
+              <p>Diamanda Management - Leena Stenberg</p>
+              <p>Tel: +4799674411</p>
+              <a
+                href="https://www.diamandamanagement.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Website
+              </a>
             </FooterInfo>
           </FooterTop>
           <FooterBottom>
-              <SocialIcons>
-                  <a href="//https://www.imdb.com/name/nm12285112/?ref_=fn_al_nm_1" rel="noopener noreferrer" target="_blank">
-                      IMDB
-                  </a>
-                  <a href="//https://www.imdb.com/name/nm12285112/?ref_=fn_al_nm_1" rel="noopener noreferrer" target="_blank">
-                      <Instagram />
-                  </a>
-                  <a href="//https://www.imdb.com/name/nm12285112/?ref_=fn_al_nm_1" rel="noopener noreferrer" target="_blank">
-                      Agent
-                  </a>
-              </SocialIcons>
-              <Contact>
-                  <Button to="/homes">
-                      Let´s Chat <IoMdArrowRoundForward />
-                  </Button>
-              </Contact>
+            <SocialIcons>
+              <a
+                href="https://www.imdb.com/name/nm12285112/?ref_=fn_al_nm_1"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <IMDB />
+              </a>
+              <a
+                href="https://www.instagram.com/beckisentertainment/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Instagram />
+              </a>
+              <a
+                href="https://filmcafe.se/cv/cv?user_id=112298"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Film />
+              </a>
+            </SocialIcons>
+            <Contact>
+              <Button to="/contact">
+                Contact Me <IoMdArrowRoundForward />
+              </Button>
+            </Contact>
           </FooterBottom>
         </Container>
       </Section>

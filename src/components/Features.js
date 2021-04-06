@@ -5,7 +5,7 @@ import ImageOne from '../images/Uddaveckor.png';
 
 
 const Section = styled.section`
-background: #000d1a;
+background: Black;
 padding: 12rem 0rem;
 display: flex;
 flex-direction: column;
@@ -33,7 +33,7 @@ const Content = styled.div`
   @media screen and (max-width: 768px) {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-top: 250px;
+    margin-top: 360px;
   }
 
   h1 {
@@ -47,7 +47,7 @@ const Content = styled.div`
 `;
 const ColumnRight = styled.div`
   position: absolute;
-  top: -80px;
+  top: -160px;
   right: 0;
   max-wisth: 850px;
   height: 140%;
@@ -63,9 +63,9 @@ const ColumnRight = styled.div`
   }
 `;
 const Image = styled.img`
-height: 100%;
+height: 150%;
 width: 100%;
-object-fit: cover;
+object-fit: contain;
 `;
 
 
@@ -76,10 +76,10 @@ const Features = () => {
                 <Wrap>
                     <ColumnLeft>
                         <Content>
-                            <h1>Stunning interior</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint suscipit reprehenderit nihil libero autem commodi nobis minima accusamus modi sunt?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestias.</p>
-                            <Button to= "/homes">Learn More</Button>
+                            <h1>Resume</h1>
+                            <p>Here you can find the complete collection of Emmi´s previous productions and you will also find information about her training here. .</p>
+                      
+                            <Button to= "/resume">Resume</Button>
                         </Content>
                     </ColumnLeft>
                     <ColumnRight>

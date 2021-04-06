@@ -1,7 +1,10 @@
+import React from 'react';
+import emailjs from 'emailjs-com';
 
-import emailjs from "emailjs-com";
+import './ContactUs.css';
 
-export default function Contact() {
+export default function ContactUs() {
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -20,20 +23,19 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-    e.target.reset();
+      e.target.reset()
   }
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
+      <input type="hidden" name="contact_number" />
       <label>Name</label>
-      <input id="info" type="text" name="name" />
+      <input type="text" name="name" />
       <label>Email</label>
-      <input id="info" type="email" name="email" />
-      <label>Subject</label>
-      <input id="info" type="text" name="subject" />
+      <input type="email" name="email" />
       <label>Message</label>
       <textarea name="message" />
-      <input id="Button" type="submit" value="Send" />
+      <input type="submit" value="Send" />
     </form>
   );
 }

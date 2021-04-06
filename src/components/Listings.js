@@ -76,7 +76,12 @@ const Listings = () => {
       <Section>
         <Container>
           <Heading>
-            <h1>Previous Work</h1>
+            <h1
+            data-aos='fade-right'
+            data-aos-duration='1000'
+            data-aos-once='true'
+            data-aos-anchor-placement='center bottom'
+            >Previous Work</h1>
           </Heading>
           <InfoRow>
             <InfoWrap>

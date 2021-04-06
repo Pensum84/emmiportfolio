@@ -1,16 +1,20 @@
-import ImageOne from '../images/nedgång.jpg';
-import ImageTwo from '../images/uddav.jpg';
+import ImageOne from '../images/descend.jpg';
+import ImageTwo from '../images/uddaveckor.jpg';
 import ImageThree from '../images/charlene.jpg';
-import ImageFour from '../images/vhs.jpg';
+import ImageFour from '../images/vhs1.jpg';
 import ImageFive from '../images/circlek.jpg';
 import ImageSix from '../images/skandia.jpg';
 import ImageSeven from '../images/cdon.jpg';
 import ImageEight from '../images/raddabarnen.jpg';
+import ImageNine from '../images/1.jpg';
+import ImageTen from '../images/heltlyriskt.jpg';
+import ImageEleven from '../images/telia.JPG';
+import ImageTwelve from '../images/youngl.jpg';
 
 export const SliderData = [
   {
     title: "Nedgång",
-    price: "Regi, Sofia Priftis",
+    price: "Director, Sofia Priftis",
     path: "/homes",
     label: "IMDB",
     image: ImageOne,
@@ -18,7 +22,7 @@ export const SliderData = [
   },
   {
     title: "Udda Veckor",
-    price: "Regi, Emma Bucht, Christopher Panov & Christian Eklöw",
+    price: "Director, Emma Bucht, Christopher Panov & Christian Eklöw",
     path: "/homes",
     label: "IMDB",
     image: ImageTwo,
@@ -26,7 +30,7 @@ export const SliderData = [
   },
   {
     title: "Charléne",
-    price: "Regi, Navneet Singh",
+    price: "Director, Navneet Nicklas Singh",
     path: "/homes",
     label: "IMDB",
     image: ImageThree,
@@ -34,7 +38,7 @@ export const SliderData = [
   },
   {
     title: "Världens Hemskaste Sjukdomar",
-    price: "Regi, Kristian ",
+    price: "Director, Kristofer Bernhardtz",
     path: "/homes",
     label: "IMDB",
     image: ImageFour,
@@ -43,36 +47,60 @@ export const SliderData = [
 ];
 
   export const SliderDataTwo = [
-  {
-    title: "CirckleK",
-    price: "Regi, Sofia Priftis",
-    path: "/homes",
-    label: "IMDB",
-    image: ImageFive,
-    alt: "Nedgång",
-  },
-  {
-    title: "Skandia",
-    price: "Regi, Emma Bucht, Christopher Panov & Christian Eklöw",
-    path: "/homes",
-    label: "IMDB",
-    image: ImageSix,
-    alt: "Udda Veckor",
-  },
-  {
-    title: "CDON",
-    price: "Regi, Navneet Singh",
-    path: "/homes",
-    label: "IMDB",
-    image: ImageSeven,
-    alt: "Charléne",
-  },
-  {
-    title: "Rädda Barnen",
-    price: "Regi, Kristian ",
-    path: "/homes",
-    label: "IMDB",
-    image: ImageEight,
-    alt: "VHS",
-  },
-];
+    {
+      title: "Circle K",
+      price: "Commercial Photo.",
+      path: "/homes",
+      image: ImageFive,
+      alt: "CircleK",
+    },
+    {
+      title: "Skandia",
+      price: "Commercial Photo.",
+      path: "/homes",
+      image: ImageSix,
+      alt: "Picture of newspaper ad",
+    },
+    {
+      title: "CDON",
+      price: "Commercial Film.",
+      path: "/homes",
+      image: ImageSeven,
+      alt: "CDON still",
+    },
+    {
+      title: "Rädda Barnen",
+      price: "Commercial Film.",
+      path: "/homes",
+      image: ImageEight,
+      alt: "Rädda barnen",
+    },
+    {
+      title: "Milk Magazine",
+      price: "Modell in March Issue 2020.",
+      path: "/homes",
+      image: ImageNine,
+      alt: "Milk",
+    },
+    {
+      title: "Helt Lyriskt",
+      price: 'Background Vocals, "Längst inne i mitt huvud".',
+      path: "/homes",
+      image: ImageTen,
+      alt: "Milk",
+    },
+    {
+      title: "Telia",
+      price: "Commercial Film.",
+      path: "/homes",
+      image: ImageEleven,
+      alt: "Telia",
+    },
+    {
+      title: "Young Lean",
+      price: "Model for his Starz Album.",
+      path: "/homes",
+      image: ImageTwelve,
+      alt: "Young Lean",
+    },
+  ];
