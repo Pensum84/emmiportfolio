@@ -17,9 +17,22 @@ code {
 }
 
 .video-responsive iframe {
+  display: flex;
+  flex-direction: column;
   left: 0;
-  top: 0;
+  top: 20px;
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+textarea {
+  margin-bottom: 15px;
+  height: 100px;
 }

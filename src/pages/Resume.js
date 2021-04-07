@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.section `
 background: White;
-padding: 4em;
+padding: 5em 10em;
 dispay: flex;
 
 `;
@@ -14,10 +14,10 @@ const Title = styled.h1`
   color: Black;
 `;
 const List1 = styled.ul`
-display: flex;
-line-height: 1.8em;
-flex-direction: column;  
-color: Black;
+  display: flex;
+  line-height: 1.8em;
+  flex-direction: column;
+  color: Black;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -27,6 +27,7 @@ color: Black;
   border: 2px solid Black;
   padding: 10px;
   margin: 50px;
+  box-shadow: -60px -16px black;
 `;
 const List2 = styled.ul`
   display: flex;
@@ -42,14 +43,29 @@ const List2 = styled.ul`
   border: 2px solid Black;
   padding: 10px;
   margin: 50px;
+  box-shadow: 60px -16px black;
 `;
 
 const Resume = () => {
     return (
       <div>
         <Wrapper>
-          <Title>Previous Work</Title>
-          <List1>
+          <Title
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            Previous Work
+          </Title>
+          <List1
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
             <table>
               <tr>
                 <th>Production:</th>
@@ -128,13 +144,37 @@ const Resume = () => {
               </tr>
             </table>
           </List1>
-          <Title>Training</Title>
-          <List2>
+          <Title
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-delay="400"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            Training
+          </Title>
+          <List2
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-delay="400"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
             <table>
               <tr>
                 <th>School:</th>
                 <th>Class:</th>
                 <th>Year:</th>
+              </tr>
+              <tr>
+                <td>The WAG NY "Writers and actors group New York"</td>
+                <td>Acting Lessons</td>
+                <td>2021 - present</td>
+              </tr>
+              <tr>
+                <td>DramaCoachen</td>
+                <td>Acting Lessons</td>
+                <td>2021 - present</td>
               </tr>
               <tr>
                 <td>Base23</td>

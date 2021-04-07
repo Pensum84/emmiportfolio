@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { InfoData } from '../data/InfoData';
 import { Button } from './Button';
 
 const Section = styled.section`
@@ -74,7 +75,9 @@ const InfoSection = ({heading, paragraphOne, paragraphTwo, paragraphThree, parag
             <p>{paragraphThree}</p>
             <p>{paragraphFour}</p>
             <p>{paragraphFive}</p>
-            <Button to="/about" primary="true">
+            <Button
+              to={{ pathname: `${InfoData.path}` }}
+            >
               {buttonLabel}
             </Button>
           </ColumnLeft>

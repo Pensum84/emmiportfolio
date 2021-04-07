@@ -77,14 +77,21 @@ const Listings = () => {
         <Container>
           <Heading>
             <h1
-            data-aos='fade-right'
-            data-aos-duration='1000'
-            data-aos-once='true'
-            data-aos-anchor-placement='center bottom'
-            >Previous Work</h1>
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              Previous Work
+            </h1>
           </Heading>
           <InfoRow>
-            <InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
               <Image src={HomeOne} alt="home" />
               <h2>4 bed 3 bathrooms in Stockholm.</h2>
               <InfoLink to="/homes">
@@ -92,10 +99,22 @@ const Listings = () => {
                 <Arrow />
               </InfoLink>
             </InfoWrap>
-            <InfoWrap>
-              <Image src={HomeTwo} alt="home" css={`margin-top: 120px; @media screen and (max-width: 768px){
-                  margin-top: 0px;
-              } `}/>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <Image
+                src={HomeTwo}
+                alt="home"
+                css={`
+                  margin-top: 120px;
+                  @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                  }
+                `}
+              />
               <h2>6 bed 2 bathrooms in Linköping.</h2>
               <InfoLink to="/homes">
                 <p>View Details</p>

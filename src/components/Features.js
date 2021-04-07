@@ -71,24 +71,40 @@ object-fit: contain;
 
 const Features = () => {
     return (
-        <Section>
-            <Container>
-                <Wrap>
-                    <ColumnLeft>
-                        <Content>
-                            <h1>Resume</h1>
-                            <p>Here you can find the complete collection of Emmi´s previous productions and you will also find information about her training here. .</p>
-                      
-                            <Button to= "/resume">Resume</Button>
-                        </Content>
-                    </ColumnLeft>
-                    <ColumnRight>
-                        <Image src={ImageOne} />
-                    </ColumnRight>
-                </Wrap>
-            </Container>
-        </Section>
-    )
+      <Section>
+        <Container>
+          <Wrap>
+            <ColumnLeft>
+              <Content
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+                data-aos-once="true"
+                data-aos-anchor-placement="center bottom"
+              >
+                <h1>Resume</h1>
+                <p>
+                  Here you can find the complete collection of Emmi´s previous
+                  productions and you will also find information about her
+                  training here.
+                </p>
+
+                <Button to="/resume">Resume</Button>
+              </Content>
+            </ColumnLeft>
+            <ColumnRight>
+              <Image
+                src={ImageOne}
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-once="true"
+                data-aos-anchor-placement="center bottom"
+              />
+            </ColumnRight>
+          </Wrap>
+        </Container>
+      </Section>
+    );
 }
 
 export default Features;

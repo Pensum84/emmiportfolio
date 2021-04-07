@@ -1,31 +1,30 @@
-import React, {useEffect, useState, useRef} from 'react';
-import styled, {css} from 'styled-components/macro';
+import React, { useEffect, useState, useRef } from "react";
+import styled, { css } from "styled-components/macro";
 import { Button } from "./Button";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
-import {motion, AnimatePresence} from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection = styled.section`
-    height: 100vh;
-    max-width: 100vw;
-    position: relative;
-    overflow: hidden;
+  height: 100vh;
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
 `;
 
 const HeroWrapper = styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-position: relative;
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 `;
 const HeroSlide = styled.div`
- z-index: 1;
- width: 100%;
- heigth: 100%;
+  z-index: 1;
+  width: 100%;
+  heigth: 100%;
 `;
 const HeroSlider = styled.div`
   position: absolute;
@@ -50,7 +49,7 @@ const HeroSlider = styled.div`
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 50%, 
+      rgba(0, 0, 0, 0.2) 50%,
       rgba(0, 0, 0, 0.6) 100%
     );
   }
@@ -68,7 +67,7 @@ const HeroContent = styled.div`
   position: relative;
   z-index: 10;
   display: flex;
-  margin-top: 20%; 
+  margin-top: 20%;
   flex-direction: column;
   max-width: 1700px;
   width: calc(100% - 150px);
@@ -88,131 +87,132 @@ const HeroContent = styled.div`
   }
 `;
 const Arrow = styled(IoMdArrowRoundForward)`
-margin-left: 0.4rem;
+  margin-left: 0.4rem;
 `;
 const SliderButtons = styled.div`
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    display: flex;
-    z-index: 10;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  z-index: 10;
 `;
-const arrowButtons = css`   
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    cursor: pointer;
-    background: #000d1a;
-    border-radius: 50px;
-    padding: 10px;
-    margin-right: 1rem;
-    user-select: none;
-    transition: 0.3s;
+const arrowButtons = css`
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  background: #000d1a;
+  border-radius: 50px;
+  padding: 10px;
+  margin-right: 1rem;
+  user-select: none;
+  transition: 0.3s;
 
-    &:hover{
-        background: #cd853f;
-        transform: scale(1.05);
-    }
+  &:hover {
+    background: #cd853f;
+    transform: scale(1.05);
+  }
 `;
 const PrevArrow = styled(IoArrowBack)`
-${arrowButtons}`;
+  ${arrowButtons}
+`;
 const NextArrow = styled(IoArrowForward)`
-${arrowButtons}`;
-
+  ${arrowButtons}
+`;
 
 const Hero = ({ slides }) => {
-const [current, setCurrent] = useState(0);
-const length = slides.length;
-const timeout = useRef(null);
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+  const timeout = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
     const nextSlide = () => {
-        setCurrent(current =>(current === length - 1 ? 0 : current + 1));
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
 
     timeout.current = setTimeout(nextSlide, 5000);
 
-    return function (){
-        if(timeout.current){
-            clearTimeout(timeout.current);
-        }
+    return function () {
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
     };
-}, [current, length]);
+  }, [current, length]);
 
-const nextSlide = () => {
+  const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
     console.log(current);
-};
+  };
 
-const prevSlide = () => {
+  const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
     console.log(current);
-};
+  };
 
-if(!Array.isArray(slides) || slides.length <= 0){
-    return null
-}
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
 
-const fadeAnimation = {
-  hidden: { opacity: 0},
-  visible: { opacity: 1, transition: { duration: 0.8}},
-  exit: { opacity: 0}
-}
-    return (
-      <HeroSection>
-        <HeroWrapper>
-          <AnimatePresence>
-            {slides.map((slide, index) => {
-              return (
-                <HeroSlide key={index}>
-                  {index === current && (
-                    <HeroSlider>
-                      <HeroImage
-                        src={slide.image}
-                        alt={slide.alt}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        variants={fadeAnimation}
-                      />
-                      <HeroContent>
-                        <h1 data-aos="fade-down" data-aos-duration="600">
-                          {slide.title}
-                        </h1>
-                        <p
-                          data-aos="fade-down"
-                          data-aos-duration="600"
-                          data-aos-delay="200"
-                        >
-                          {slide.price}
-                        </p>
-                        <Button
-                          data-aos="zoom-out"
-                          data-aos-duration="500"
-                          data-aos-delay="250"
-                          to={slide.path}
-                          primary="true"
-                          css={`
-                            max-width: 10px;
-                          `}
-                        >
-                          {slide.label}
-                          <Arrow />
-                        </Button>
-                      </HeroContent>
-                    </HeroSlider>
-                  )}
-                </HeroSlide>
-              );
-            })}
-          </AnimatePresence>
-          <SliderButtons>
-            <PrevArrow onClick={prevSlide} />
-            <NextArrow onClick={nextSlide} />
-          </SliderButtons>
-        </HeroWrapper>
-      </HeroSection>
-    );
+  const fadeAnimation = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8 } },
+    exit: { opacity: 0 },
+  };
+  return (
+    <HeroSection>
+      <HeroWrapper>
+        <AnimatePresence>
+          {slides.map((slide, index) => {
+            return (
+              <HeroSlide key={index}>
+                {index === current && (
+                  <HeroSlider>
+                    <HeroImage
+                      src={slide.image}
+                      alt={slide.alt}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={fadeAnimation}
+                    />
+                    <HeroContent>
+                      <h1 data-aos="fade-down" data-aos-duration="600">
+                        {slide.title}
+                      </h1>
+                      <p
+                        data-aos="fade-down"
+                        data-aos-duration="600"
+                        data-aos-delay="200"
+                      >
+                        {slide.price}
+                      </p>
+                      <Button
+                        data-aos="zoom-out"
+                        data-aos-duration="500"
+                        data-aos-delay="250"
+                        to={{ pathname:`${slide.path}` }} target="_blank"
+                        primary="true"
+                        css={`
+                          max-width: 10px;
+                        `}
+                      >
+                        {slide.label}
+                        <Arrow />
+                      </Button>
+                    </HeroContent>
+                  </HeroSlider>
+                )}
+              </HeroSlide>
+            );
+          })}
+        </AnimatePresence>
+        <SliderButtons>
+          <PrevArrow onClick={prevSlide} />
+          <NextArrow onClick={nextSlide} />
+        </SliderButtons>
+      </HeroWrapper>
+    </HeroSection>
+  );
 };
 
 export default Hero;

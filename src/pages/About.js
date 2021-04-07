@@ -1,5 +1,5 @@
 
-import InfoSection from '../components/InfoSection';
+import InfoSection from '../components/InfoSectionAbout';
 import { InfoDataTwo } from "../data/InfoData";
 
 const About = () => {
