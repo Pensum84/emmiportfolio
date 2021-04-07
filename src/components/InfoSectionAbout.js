@@ -26,11 +26,11 @@ const ColumnRight = styled.div`
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
   @media screen and (max-width: 768px) {
-    order: ${({ reverse }) => (reverse ? "2" : "1")};
+    order: ${({ reverse }) => (reverse ? "1" : "2")};
   }
   img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
 
     @media screen and (max-width: 768px) {
@@ -49,11 +49,12 @@ const ColumnLeft = styled.div`
   order: ${({ reverse }) => (reverse ? "1" : "2")};
 
   h1 {
+    margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
   p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -72,6 +73,17 @@ const InfoSection = ({
   return (
     <Section>
       <Container>
+        <ColumnRight reverse={reverse}>
+          <img
+            src={image}
+            alt="home"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            data-aos-delay={delay}
+            data-aos-anchor-placement="center bottom"
+          />
+        </ColumnRight>
         <ColumnLeft
           reverse={reverse}
           data-aos="fade-up"
@@ -90,17 +102,6 @@ const InfoSection = ({
             {buttonLabel}
           </Button>
         </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={image}
-            alt="home"
-            data-aos="zoom-out"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            data-aos-delay={delay}
-            data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
       </Container>
     </Section>
   );

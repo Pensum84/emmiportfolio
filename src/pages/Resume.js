@@ -26,8 +26,12 @@ const List1 = styled.ul`
   width: 100%;
   border: 2px solid Black;
   padding: 10px;
-  margin: 50px;
+  margin: 5%;
   box-shadow: -60px -16px black;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 const List2 = styled.ul`
   display: flex;
