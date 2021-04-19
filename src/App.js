@@ -12,9 +12,17 @@ import Resume from './pages/Resume';
 import Video from "./pages/Video";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import ReactGA from "react-ga";
 
 
 function App() {
+
+    useEffect(() => {
+      ReactGA.initialize("UA-194878475-1");
+
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
 const [isOpen, setIsOpen] = useState(false);
 const location = useLocation();
 const toggle = () => {

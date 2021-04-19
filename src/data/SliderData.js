@@ -98,7 +98,7 @@ export const SliderDataTwo = [
   },
   {
     title: "Young Lean",
-    price: "Model for his Starz Album.",
+    price: "Model for Yong Lean´s Starz Album.",
     path: "/homes",
     image: ImageTwelve,
     alt: "Young Lean",

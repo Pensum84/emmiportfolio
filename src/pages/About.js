@@ -4,6 +4,7 @@ import { InfoDataTwo } from "../data/InfoData";
 
 const About = () => {
   return(
+    
     <>
     <InfoSection {...InfoDataTwo} />
     </>

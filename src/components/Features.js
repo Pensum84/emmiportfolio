@@ -84,9 +84,8 @@ const Features = () => {
               >
                 <h1>Resume</h1>
                 <p>
-                  Here you can find the complete collection of Emmi´s previous
-                  productions and you will also find information about her
-                  training here.
+                  If you want to find the complete collection of Emmi´s previous
+                  productions and training please visit the Resumé page by clicking on the button below.
                 </p>
 
                 <Button to="/resume">Resume</Button>
