@@ -4,16 +4,7 @@ import { Link } from "react-router-dom";
 import  { menuData } from "../data/MenuData";
 import { Button } from "./Button";
 import {FaBars} from 'react-icons/fa';
-import Loga from "../images/loga.png";
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  max-width: 50px;
-  max-height: 50px;
-  object-fit: cover;
-  border-radius: 800px;
-`;
 
 const Nav = styled.nav`
   height: 60px;

@@ -105,6 +105,7 @@ const Contact = () => {
       <textarea name="message" />
       <input type="submit" value="Send" />
     </form>
+    
 
               </p>
             </Content>

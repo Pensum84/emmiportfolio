@@ -54,6 +54,7 @@ h1{
 }
 p{
     margin-bottom: 2rem;
+    letter-spacing: 1px;
 }
 `;
 

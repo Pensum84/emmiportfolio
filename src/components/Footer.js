@@ -2,7 +2,7 @@ import React from 'react';
 import { IoMdArrowRoundForward } from "react-icons/io";
 import styled, { css } from "styled-components/macro";
 import { Button } from "./Button";
-import { FaInstagram, FaImdb } from "react-icons/fa";
+import { FaInstagram, FaImdb, FaYoutube, FaFacebookSquare } from "react-icons/fa";
 import { BiFilm } from "react-icons/bi";
 
 const Section = styled.section`
@@ -80,6 +80,12 @@ const IMDB = styled(FaImdb)`
 const Film = styled(BiFilm)`
   ${Icons}
 `;
+const YouTube = styled(FaYoutube)`
+  ${Icons}
+`;
+const Facebook = styled(FaFacebookSquare)`
+  ${Icons}
+`;
 
 const Contact = styled.div`
   width: 50%;
@@ -138,6 +144,20 @@ const Footer = () => {
                 target="_blank"
               >
                 <Film />
+              </a>
+              <a
+                href="https://www.facebook.com/beckisentertainment"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Facebook />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCL6yNk89oKtL8YVTZcRYuYQ"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <YouTube />
               </a>
             </SocialIcons>
             <Contact>

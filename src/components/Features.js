@@ -43,6 +43,7 @@ const Content = styled.div`
   p {
     margin-bottom: 1rem;
     line-height: 1.5;
+    letter-spacing: 1px;
   }
 `;
 const ColumnRight = styled.div`
@@ -82,13 +83,16 @@ const Features = () => {
                 data-aos-once="true"
                 data-aos-anchor-placement="center bottom"
               >
-                <h1>Resume</h1>
+                <h1>Resumé</h1>
                 <p>
-                  If you want to find the complete collection of Emmi´s previous
-                  productions and training please visit the Resumé page by clicking on the button below.
+                  I figure you are starting to get curious about this young girl
+                  and want to know more about her previouse work and what she
+                  can do. Why don´t you visit the Video and Resumé pages by
+                  clicking the button below and you´ll find out.
                 </p>
 
                 <Button to="/resume">Resume</Button>
+                <Button to="/video">Showreel</Button>
               </Content>
             </ColumnLeft>
             <ColumnRight>

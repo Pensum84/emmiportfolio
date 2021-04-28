@@ -55,6 +55,7 @@ const ColumnLeft = styled.div`
   }
   p {
     margin-bottom: 1rem;
+    letter-spacing: 1px;
   }
 `;
 
